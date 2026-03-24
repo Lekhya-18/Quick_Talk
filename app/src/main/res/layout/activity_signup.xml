@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- App Name -->
+    <TextView
+        android:text="Quick Talk"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/email"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/password"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginBtn"
+        android:text="Login"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Signup Link -->
+    <TextView
+        android:id="@+id/signupText"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="#0000FF"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

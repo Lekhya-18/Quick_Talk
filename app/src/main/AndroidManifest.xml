@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartChatApp">
         <activity
+            android:name=".LoginPg"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
