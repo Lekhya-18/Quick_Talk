@@ -4,21 +4,37 @@ import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
+import android.widget.Button;
+import android.widget.TextView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button logoutBtn;
+    TextView userEmail;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // 🔹 Initialize Firebase
+        mAuth = FirebaseAuth.getInstance();
+
+        // 🔹 Connect UI
+        logoutBtn = findViewById(R.id.logoutBtn);
+        userEmail = findViewById(R.id.userEmail);
+
+        // 🔹 Show logged-in user email
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            userEmail.setText("Logged in as: " + user.getEmail());
+        }
+        logoutBtn.setOnClickListener(v -> {
+            mAuth.signOut(); // logout
+            startActivity(new Intent(MainActivity.this, LoginPg.class));
+            finish(); // close current activity
         });
     }
 }

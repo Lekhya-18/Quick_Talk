@@ -34,7 +34,7 @@ public class LoginPg extends AppCompatActivity {
                         .addOnCompleteListener(task -> {
                             if(task.isSuccessful()){
                                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(this, MainActivity.class));
+                                startActivity(new Intent(this, SplashActivity.class));
                             } else {
                                 Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
                             }

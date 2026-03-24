@@ -31,7 +31,7 @@ public class Signup extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if(task.isSuccessful()){
                             Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(this, LoginActivity.class));
+                            startActivity(new Intent(this, LoginPg.class));
                         } else {
                             Toast.makeText(this, "Signup Failed", Toast.LENGTH_SHORT).show();
                         }
