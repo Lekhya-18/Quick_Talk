@@ -1,53 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <!-- App Name -->
-    <TextView
-        android:text="Quick Talk"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <!-- Email -->
-    <EditText
-        android:id="@+id/email"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress"
+    <ImageView
+        android:src="@drawable/img_1"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <!-- Password -->
-    <EditText
-        android:id="@+id/password"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:layout_marginTop="16dp"
+        android:layout_height="match_parent"/>
+    <View
+        android:background="#66000000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/loginBtn"
-        android:text="Login"
-        android:layout_marginTop="24dp"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:layout_margin="24dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <!-- Signup Link -->
-    <TextView
-        android:id="@+id/signupText"
-        android:text="Don't have an account? Sign Up"
-        android:textColor="#0000FF"
-        android:layout_marginTop="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-</LinearLayout>
+        <!-- Title -->
+        <TextView
+            android:text="Create Account"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/name"
+            android:hint="Full Name"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/signupBtn"
+            android:text="Sign Up"
+            android:textColor="#fff3b0"
+            android:backgroundTint="#540b0e"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/loginText"
+            android:text="Already have an account? Login"
+            android:textColor="#335c67"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>
