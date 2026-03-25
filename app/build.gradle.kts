@@ -28,4 +28,5 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     // Firebase Auth
     implementation("com.google.firebase:firebase-auth:22.3.0")
+    implementation("com.google.firebase:firebase-database:20.3.0") //FB data
 }

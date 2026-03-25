@@ -1,40 +1,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
+    android:padding="16dp"
     android:background="#f1faee"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="Quick Talk 💬"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#1d3557"
-        android:layout_marginBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:text="Welcome! You are logged in 🎉"
-        android:textSize="16sp"
-        android:textColor="#457b9d"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:text="Quick Talk 💬"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1d3557"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:text="Logout"
+            android:textColor="#ffffff"
+            android:backgroundTint="#e63946"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/userEmail"
         android:text="Logged in as: user@gmail.com"
-        android:textSize="15sp"
-        android:textColor="#333333"
-        android:layout_marginBottom="30dp"
+        android:textSize="14sp"
+        android:textColor="#457b9d"
+        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/logoutBtn"
-        android:text="Logout"
-        android:textColor="#ffffff"
-        android:background="#e63946"
-        android:padding="12dp"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
